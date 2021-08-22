@@ -5,19 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            font-size: 33px;
+        }
+        .bordered {
+            border:2px solid #d3d3d3;
+            border-radius: 25px;
+        }
+    </style>
 </head>
 <body>
     <div class="row">
         <div class="column left">
-            <a href="index.html"><img class="logo" src="images/logo.png"></a>
+            <img class="logo" src="images/logo.png">
             <div class="left-menu">
-                <a href="자산관리.html" target="_blank" title="자산 관리">자산 관리</a><br>
-                <a href="금융추천.html" target="_blank" title="금융 추천">금융 추천</a><br>
-                <a href="상품추천.html" target="_blank" title="상품 추천">상품 추천</a><br>
-                <a href="금융도우미.html" target="_blank" title="금융 도우미">금융 도우미</a><br>
-                <a href="커뮤니티.html" target="_blank" title="커뮤니티">커뮤니티</a><br>
-                <a href="설정.html" target="_blank" title="설정">설정</a><br> 
-            </div>
+                <table style="width:100%">
+                    <colgroup>
+                        <col span="1" style="width: 30%;">
+                        <col span="1" style="width: 70%;">
+                        
+                     </colgroup>
+                    <tbody>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/graph.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px; "> 
+                                <a href="자산관리.html" target="_blank" title="자산 관리">자산 관리</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/pick.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="금융추천.html" target="_blank" title="금융 추천">금융 추천</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/star.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="상품추천.html" target="_blank" title="상품 추천">상품 추천</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/me.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="금융도우미.html" target="_blank" title="금융 도우미">금융 도우미</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/community.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="커뮤니티.html" target="_blank" title="커뮤니티">커뮤니티</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/setting.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="설정.html" target="_blank" title="설정">설정</a><br> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <img class="mascot" src="images/alien.png">
+           </div>
         </div>
         <div class="column right">
             <div class="head">
@@ -25,26 +86,106 @@
                     <input type="text" class="search" placeholder="필요한 서비스를 검색해 보세요">
                     <button class="click"> <img class="icon" src="images/search.png"> </button>
                 </div>
-
-                <div class="nav">
-                    <a href="회원가입.html">회원가입</a>
-                    <a href="로그인.html">로그인</a>
-
+            </div>
+            <div class="margin-main">
+                <div>
+                    <img align="left" class="top-img" src="images/search.png"><h1>이하나님의 8월 주거비 현황입니다</h1>
+                    <div style="width: 25%; margin-left: 35px;" class="column">
+                        <img src="images/piechart.png" width="110%;">
+                    </div>
+                    <div style="width: 57%; margin-left: 90px;" class="bordered column">
+                        <h2 style="text-align: center;">이번 달 총 주거비 ######원</h2>
+                        <table style="width: 100%; margin-left: 14%;">
+                            <colgroup>
+                                <col span="1" style="width: 5%;">
+                                <col span="1" style="width: 18%;">
+                                <col span="1" style="width: 23%;">
+                                <col span="1" style="width: 30%;">
+                                <col span="1" style="width: 23%;">
+                             </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img width="25px" src="images/yellow.png">
+                                    </td>
+                                    <td style="font-size: 25;">
+                                        월세
+                                    </td>
+                                    <td>
+                                        <hr>
+                                    </td>
+                                    <td>
+                                        <button>납부하기</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img width="25px" src="images/yellow.png">
+                                    </td>
+                                    <td style="font-size: 25;">
+                                        월세
+                                    </td>
+                                    <td>
+                                        <hr>
+                                    </td>
+                                    <td>
+                                        <button>납부하기</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img width="25px" src="images/yellow.png">
+                                    </td>
+                                    <td style="font-size: 25;">
+                                        월세
+                                    </td>
+                                    <td>
+                                        <hr>
+                                    </td>
+                                    <td>
+                                        <button>납부하기</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img width="25px" src="images/yellow.png">
+                                    </td>
+                                    <td style="font-size: 25;">
+                                        월세
+                                    </td>
+                                    <td>
+                                        <hr>
+                                    </td>
+                                    <td>
+                                        <button>납부하기</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img width="25px" src="images/yellow.png">
+                                    </td>
+                                    <td style="font-size: 25;">
+                                        월세
+                                    </td>
+                                    <td>
+                                        <hr>
+                                    </td>
+                                    <td>
+                                        <button>납부하기</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <img align="left" class="top-img" src="images/run.png"><h1>이번달 목표 생활비에 거의 도달했어요</h1>    
                 </div>
 
-
-            </div>
-            <div>
-                <h1><img src="images/search.png">이하나님의 8월 주거비 현황입니다</h1>
-
-            </div>
-            <div>
-                <h1><img src="images/run.png">이번달 목표 생활비에 거의 도달했어요</h1>    
-            </div>
-
-            <div>
-                <h1><img src="images/barchart.png">이하나님의 생활비는 평균보다 높습니다</h1>
-                <input type=button value="생활비 분석 리포트" onclick="location.href='생활비분석리포트.html'">
+                <div>
+                    <img align="left" class="top-img" src="images/barchart.png"><h1>이하나님의 생활비는 평균보다 높습니다</h1>
+                    <input type=button value="생활비 분석 리포트" onclick="location.href='생활비분석리포트.html'">
+                </div>
             </div>
 
 
