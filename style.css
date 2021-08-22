@@ -3,13 +3,13 @@
   }
   
 .left {
-  width: 15%;
+  width: 18%;
   background-color: #128671;
   color: #FFFFFF;
 }
   
 .right {
-  width: 85%;
+  width: 82%;
 }
 
 .logo {
@@ -18,15 +18,17 @@
 }
 .left-menu {
     font-family: sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 300%;
     text-align: center;
-    padding-bottom: 90%;
-    text-shadow: 1px 1px grey;
+
 }
-a, a:hover, a:active, a:visited { 
+a, a:visited { 
     color: white; 
     text-decoration:none;
+}
+a:hover, a:active {
+    color: #FFD058;
 }
 .icon {
   width: 20px;
@@ -51,5 +53,18 @@ a, a:hover, a:active, a:visited {
   width: 20px;
 }
 .menu-img {
-  width: 15px;
+  width: 20px;
+}
+.mascot {
+  width: 70%;
+  padding-top: 50%;
+  padding-bottom: 10%;
+}
+.margin-main {
+  margin: 50px;
+  font-family: sans-serif;
+}
+.top-img {
+  width: 33px;
+  margin-right: 10px;
 }
