@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#nav ul.sub").hide();
+			$("#nav ul.menu li").click(function(){
+				$("ul",this).slideToggle("fast");
+			});
+		});
+        $('a.feellink').click(function(e)   {
+	        e.preventDefault();   
+        });
+        
+	</script>
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    #nav { font-family:'arial'; }
+	#nav ul{ width:100%; margin:0; padding:0; }
+	#nav ul.menu li{ 
+        position:relative; 
+        float:left; width:100%; 
+        list-style-type:none; 
+    }
+	#nav ul.menu li a{ 
+        display:block; 
+        width:100%; 
+        height:100%; 
+        line-height:70px; 
+        text-indent:10px; 
+        color:black; 
+        font-weight:bold; 
+        text-decoration:none; 
+        font-family: sans-serif;
+    }
+	#nav ul.menu li a:hover{ 
+        background:#eee; 
+    }
+	#nav ul.menu li .sub a{ 
+        position:relative; 
+        float:left; 
+        display:block; 
+        width:100%; 
+        z-index:auto; 
+        background:white; 
+        font-size: 15px;
+    }
+	#nav ul.menu li .sub a:hover{ 
+        background:#D8F2EC; 
+        color:black; 
+    }
+    .menu-padding {
+        padding-top: 10px;
+        padding-bottom: -10px;
+    }
+	
+    .recmd{
+        display:flex;flex-wrap: wrap; 
+     
+    }
+    .circle {
+        width: 140px;
+        height: 140px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        border-radius: 50%;
+        background: hsl(166, 50%, 90%);
+        margin: auto;
+        text-align: center;
+        box-shadow: 1px 1px #888888;
+    }
+    h4 {
+        color: black;
+        font-family: sans-serif;
+        font-size: 18px;
+        padding-top: 60px;
+    }
+    div.circle:hover {
+        background-color: #56C4B0;
+        color: white;
+    }
+</style>
+<body>
+
+    <div class="row">
+        <div class="column left">
+            <a href="index.html"><img class="logo" src="images/logo.png"></a>
+            <div class="left-menu">
+                <a href="자산관리.html" target="_blank" title="자산 관리">자산 관리</a><br>
+                <a href="금융추천.html" target="_blank" title="금융 추천">금융 추천</a><br>
+                <a href="상품추천.html" target="_blank" title="상품 추천">상품 추천</a><br>
+                <a href="금융도우미.html" target="_blank" title="금융 도우미">금융 도우미</a><br>
+                <a href="커뮤니티.html" target="_blank" title="커뮤니티">커뮤니티</a><br>
+                <a href="설정.html" target="_blank" title="설정">설정</a><br> 
+            </div>
+        </div>
+        <div class="column right">
+            <div class="head">
+                <div class="search">
+                    <input type="text" class="search" placeholder="필요한 서비스를 검색해 보세요">
+                    <button class="click"> <img class="icon" src="images/search.png"> </button>
+                </div>
+            </div>
+            <h1>개인정보 설정</h1>
+            <div class="myform">
+                <form>
+                    <label for="name">이름</label>
+                    <input id="name" type="text" name="myname" placeholder="이름입력" required>
+            
+                    <label for="age">생년월일</label>
+                    <input id="age" type="date" name="mybirth" required>
+                    
+                    <label for="id">ID</label>
+                    <input id="id" type="text" name="myid" required>
+            
+                    <label for="pw">비밀번호 설정</label>
+                    <input id="pw" type="text" name="mypw" required>
+
+                    <label for="pw2">비밀번호 확인</label>
+                    <input id="pw2" type="text" name="mypw2" required>
+
+
+                </form>
+            </div>
+            
+            <h1>주거비 설정</h1>
+            <div class="livingform">
+                
+                <form>
+                    <label for="month">월세</label>
+                    <input id="month" type="number" name="mymonth" required>만원
+            
+                    <label for="bill">관리비</label>
+                    <input id="bill" type="number" name="mybill" required>만원
+                    
+                    <label for="goal">목표 생활비</label>
+                    <input id="goal" type="number" name="mygoal" required> 만원
+                    
+                    <label for="auto">자동이체</label>
+                    <select name="auto" size="2">
+                
+                        <option value="yes">설정함</option>
+                        <option value="no">설정안함</option>
+                        
+                    </select>
+
+                    <label for="alert">알림일</label>
+                    <input id="alert" type="text" name="myalert" required><br>
+
+                    <label for="account">계좌연동</label>
+                    <input id="account1" type="radio" name="myaccount" required value="011">농협은행
+                    <input id="account2" type="radio" name="myaccount" required value="088">신한은행
+                    <input id="account3" type="radio" name="myaccount" required value="004">국민은행
+                    <input id="account4" type="radio" name="myaccount" required value="090">카카오뱅크
+                    <input id="account5" type="radio" name="myaccount" required value="020">우리은행
+                    <label for="accountnum">계좌번호</label>
+                    <input id="accountnum" type="number" name="myaccount" required>
+
+
+                 
+
+                    <label for="month_account">월세계좌연동</label>
+                    <input id="month_account1" type="radio" name="my_month_account" required value="011">농협은행
+                    <input id="month_account2" type="radio" name="my_month_account" required value="088">신한은행
+                    <input id="month_account3" type="radio" name="my_month_account" required value="004">국민은행
+                    <input id="month_account4" type="radio" name="my_month_account" required value="090">카카오뱅크
+                    <input id="month_account5" type="radio" name="my_month_account" required value="020">우리은행
+
+
+
+                    <label for="month_accountnum">월세계좌번호</label>
+                    <input id="month_accountnum" type="num" name="my_month_accountnum" required>
+
+
+
+                    <input type="hidden" name="backcode" value="011">
+                </form>
+            </div>
+
+            <h1>추천관리</h1>
+            <h2>금융상품</h2>
+            <div class="recmd">
+                <table style="width:90%; padding: 20px; margin-bottom: 50px">
+                    <tbody>
+                        <tr style="padding-bottom: 10px;">
+                            <td>
+                                <a href="#">
+                                    <div class="circle">
+                                        <h4>투자성향</h4>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <div class="circle">
+                                        <h4>예.적금</h4>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <div class="circle">
+                                        <h4>주식/펀드</h4>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <div class="circle">
+                                        <h4>대체투자</h4>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#">
+                                    <div class="circle">
+                                        <h4>카드</h4>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <div class="circle">
+                                        <h4>보험</h4>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <div class="circle">
+                                        <h4 id="two-lines">연금/저축</h4>
+                                    </div>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <div class="circle">
+                                        <h4>대출</h4>
+                                    </div>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+
+            <h2>구독상품</h2>
+            <div class="recmd">
+                <div class="circle circle1">식품</div>
+                <div class="circle circle2">신선.야채</div>
+                <div class="circle circle3">세탁/청소</div>
+                <div class="circle circle4">생활용품</div>
+                <div class="circle circle5">의류</div>
+                <div class="circle circle6">주류</div>
+                <div class="circle circle7">콘텐츠</div>
+                <div class="circle circle8">반려동물</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

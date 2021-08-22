@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+   .search {
+  border: none;
+  background-color: #F7F7F7;
+  width: 80%;
+  padding: 9px;
+  font-size: 15px;
+
+} 
+   header{
+       width:100vw; height:15vh; padding:40px; display:flex;
+   }
+   
+   main {
+       width:100vw; height: 40vh; background-color: #1BA78A; display:flex; flex-direction: column;  justify-content:space-around; align-items: center;
+   }
+   
+
+   div{margin:40px;}
+   h1{margin-right:150px;margin-top:300px;}
+   form,input,h1{font-size: x-large;}
+   
+</style>
+<body>
+    <header>
+       <img src="images/MainLogo.png">
+       <div class="search">
+        <input type="text" class="search" placeholder="필요한 서비스를 검색해 보세요">
+        <button class="click"> <img class="icon" src="images/search.png"> </button>
+        </div>
+    </header>
+     
+    <main>
+        
+        <h1><img src="images/me.png">기본정보를 입력해주세요!</h1>
+        
+        <form class="form-detail" th:action="@{/user}" method="POST">
+            <div class="form-row">
+                <label for="username">NAME</label>
+                <input type="text" name="name" id="name" class="input-text type" required>
+            </div>
+            <div class="form-row">
+                <label for="your_email">BIRTH</label>
+                <input type="text" name="birth" id="birth" class="input-text type" required>
+            </div>
+            <div class="form-row">
+                <label for="password">ID</label>
+                <input type="password" name="id" id="id" class="input-text type" required>
+            </div>
+            <div class="form-row">
+                <label for="username">PASSWORD</label>
+                <input type="text" name="password" id="password" class="input-text type" required>
+            </div>
+
+            <div class="form-row">
+                <label for="username">PASSWORD 확인</label>
+                <input type="text" name="password2" id="password2" class="input-text type" required>
+            </div>
+
+            <div class="form-row-last">
+                <input type="submit" name="register" class="register" value="Register">
+                
+            </div>
+        </form>
+    </main>
+</body>
+</html>

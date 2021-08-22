@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="style.css">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#nav ul.sub").hide();
+			$("#nav ul.menu li").click(function(){
+				$("ul",this).slideToggle("fast");
+			});
+		});
+        $('a.feellink').click(function(e)   {
+	        e.preventDefault();   
+        });
+        
+	</script>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    #nav { font-family:'arial'; }
+	#nav ul{ width:100%; margin:0; padding:0; }
+	#nav ul.menu li{ 
+        position:relative; 
+        float:left; width:100%; 
+        list-style-type:none; 
+    }
+	#nav ul.menu li a{ 
+        display:block; 
+        width:100%; 
+        height:100%; 
+        line-height:70px; 
+        text-indent:10px; 
+        color:black; 
+        font-weight:bold; 
+        text-decoration:none; 
+        font-family: sans-serif;
+    }
+	#nav ul.menu li a:hover{ 
+        background:#eee; 
+    }
+	#nav ul.menu li .sub a{ 
+        position:relative; 
+        float:left; 
+        display:block; 
+        width:100%; 
+        z-index:auto; 
+        background:white; 
+        font-size: 15px;
+    }
+	#nav ul.menu li .sub a:hover{ 
+        background:#D8F2EC; 
+        color:black; 
+    }
+    .menu-padding {
+        padding-top: 10px;
+        padding-bottom: -10px;
+    }
+	
+    .circle {
+        width: 140px;
+        height: 140px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        border-radius: 50%;
+        background: #D8F2EC;
+        margin: auto;
+        text-align: center;
+        box-shadow: 1px 1px #888888;
+    }
+    .content {
+        margin-left: 60px;
+        margin-top: 40px;
+        margin-right: 60px;
+        padding-right: -15px;
+    }
+    
+    h4 {
+        color: black;
+        font-family: sans-serif;
+        font-size: 18px;
+        padding-top: 60px;
+    }
+    div.circle:hover {
+        background-color: #56C4B0;
+        color: white;
+    }
+    #two-lines {
+        padding-top: 53px;
+    }
+    ul {
+        font-size: 25px;
+    }
+    h5 {
+        margin-bottom: -5px;
+    }
+    hr {
+        border-color: #56C4B0;
+        margin-top: -5px;
+    }
+    
+</style>
+</head>
+<body>
+
+    <div class="row">
+        <div class="column left">
+            <img class="logo" src="images/logo.png">
+            <div class="left-menu">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class ="menu-img" src="images/graph.png">
+                            </td>
+                            <td>
+                                <a href="자산관리.html" target="_blank" title="자산 관리">자산 관리</a><br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="자산관리.html" target="_blank" title="자산 관리">자산 관리</a><br>
+                <a href="금융추천.html" target="_blank" title="금융 추천">금융 추천</a><br>
+                <a href="상품추천.html" target="_blank" title="상품 추천">상품 추천</a><br>
+                <a href="금융도우미.html" target="_blank" title="금융 도우미">금융 도우미</a><br>
+                <a href="커뮤니티.html" target="_blank" title="커뮤니티">커뮤니티</a><br>
+                <a href="설정.html" target="_blank" title="설정">설정</a><br> 
+            </div>
+        </div>
+        <div class="column right">
+            <div class="head">
+                <div class="search">
+                    <input type="text" class="search" placeholder="필요한 서비스를 검색해 보세요">
+                    <button class="click"><img class="icon" src="images/search.png"></button>
+                </div>
+            </div>
+            <div class="content">
+                <div>
+                    <table style="width:90%; padding: 20px; margin-bottom: 50px">
+                        <tbody>
+                            <tr style="padding-bottom: 10px;">
+                                <td>
+                                    <a href="#common">
+                                        <div class="circle">
+                                            <h4>공통</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#bank">
+                                        <div class="circle">
+                                            <h4>은행</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#invest">
+                                        <div class="circle">
+                                            <h4>금융 투자</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#insurance">
+                                        <div class="circle">
+                                            <h4>보험</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#card">
+                                        <div class="circle">
+                                            <h4>신용 카드</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#ordinary">
+                                        <div class="circle">
+                                            <h4>서민</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#protection">
+                                        <div class="circle">
+                                            <h4 id="two-lines">금융 소비자<br>보호</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#illegal">
+                                        <div class="circle">
+                                            <h4>불법금융대응</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="nav">
+                    <ul class="menu">
+                        <li id="common" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>공통</h5></a><hr>
+                            <ul class="sub">
+                                <li><a href="#">SUB MENU 1-1</a></li>
+                                <li><a href="#">SUB MENU 1-2</a></li>
+                                <li><a href="#">SUB MENU 1-3</a></li>
+                                <li><a href="#">SUB MENU 1-4</a></li>
+                                <li><a href="#">SUB MENU 1-5</a></li>
+                            </ul>
+                        </li>
+                        <li id="bank" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>은행</h5></a><hr>
+                            <ul class="sub">
+                                <li><a href="#">SUB MENU 1-1</a></li>
+                                <li><a href="#">SUB MENU 1-2</a></li>
+                                <li><a href="#">SUB MENU 1-3</a></li>
+                                <li><a href="#">SUB MENU 1-4</a></li>
+                                <li><a href="#">SUB MENU 1-5</a></li>
+                            </ul>
+                        </li>
+                        <li id="invest" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>금융 투자</h5></a><hr>
+                            <ul class="sub">
+                                <li><a href="#">SUB MENU 1-1</a></li>
+                                <li><a href="#">SUB MENU 1-2</a></li>
+                                <li><a href="#">SUB MENU 1-3</a></li>
+                                <li><a href="#">SUB MENU 1-4</a></li>
+                                <li><a href="#">SUB MENU 1-5</a></li>
+                            </ul>
+                        </li>
+                        <li id="insurance" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>보험</h5></a><hr>
+                            <ul class="sub">
+                                <li><a href="#">SUB MENU 1-1</a></li>
+                                <li><a href="#">SUB MENU 1-2</a></li>
+                                <li><a href="#">SUB MENU 1-3</a></li>
+                                <li><a href="#">SUB MENU 1-4</a></li>
+                                <li><a href="#">SUB MENU 1-5</a></li>
+                            </ul>
+                        </li>
+                        <li id="card" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>신용 카드</h5></a><hr>
+                            <ul class="sub">
+                                <li><a href="#">SUB MENU 1-1</a></li>
+                                <li><a href="#">SUB MENU 1-2</a></li>
+                                <li><a href="#">SUB MENU 1-3</a></li>
+                                <li><a href="#">SUB MENU 1-4</a></li>
+                                <li><a href="#">SUB MENU 1-5</a></li>
+                            </ul>
+                        </li>
+                        <li id="ordinary" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>서민</h5></a><hr>
+                            <ul class="sub">
+                                <li><a href="#">SUB MENU 1-1</a></li>
+                                <li><a href="#">SUB MENU 1-2</a></li>
+                                <li><a href="#">SUB MENU 1-3</a></li>
+                                <li><a href="#">SUB MENU 1-4</a></li>
+                                <li><a href="#">SUB MENU 1-5</a></li>
+                            </ul>
+                        </li>
+                        <li id="protection" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>금융 소비자 보호</h5></a><hr>
+                            <ul class="sub">
+                                <li><a href="#">SUB MENU 1-1</a></li>
+                                <li><a href="#">SUB MENU 1-2</a></li>
+                                <li><a href="#">SUB MENU 1-3</a></li>
+                                <li><a href="#">SUB MENU 1-4</a></li>
+                                <li><a href="#">SUB MENU 1-5</a></li>
+                            </ul>
+                        </li>
+                        <li id="illegal" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>불법금융대응</h5></a><hr>
+                            <ul class="sub">
+                                <li><a href="#">SUB MENU 1-1</a></li>
+                                <li><a href="#">SUB MENU 1-2</a></li>
+                                <li><a href="#">SUB MENU 1-3</a></li>
+                                <li><a href="#">SUB MENU 1-4</a></li>
+                                <li><a href="#">SUB MENU 1-5</a></li>
+                            </ul>
+                        </li>
+                    </ul>     
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
