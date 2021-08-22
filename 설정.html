@@ -59,10 +59,7 @@
         padding-bottom: -10px;
     }
 	
-    .recmd{
-        display:flex;flex-wrap: wrap; 
-     
-    }
+   
     .circle {
         width: 140px;
         height: 140px;
@@ -72,17 +69,27 @@
         background: hsl(166, 50%, 90%);
         margin: auto;
         text-align: center;
+        line-height: 140px;
         box-shadow: 1px 1px #888888;
     }
     h4 {
         color: black;
         font-family: sans-serif;
         font-size: 18px;
-        padding-top: 60px;
+        
     }
     div.circle:hover {
         background-color: #56C4B0;
         color: white;
+    }
+    h2 {
+        margin-bottom: -5px;
+    }
+
+    input{margin:40px;
+    font-size:18px;}
+    label{
+        font-size: 18px;
     }
 </style>
 <body>
@@ -109,110 +116,310 @@
             <h1>개인정보 설정</h1>
             <div class="myform">
                 <form>
-                    <label for="name">이름</label>
-                    <input id="name" type="text" name="myname" placeholder="이름입력" required>
-            
-                    <label for="age">생년월일</label>
-                    <input id="age" type="date" name="mybirth" required>
-                    
-                    <label for="id">ID</label>
-                    <input id="id" type="text" name="myid" required>
-            
-                    <label for="pw">비밀번호 설정</label>
-                    <input id="pw" type="text" name="mypw" required>
+                    <table style="width:80%; padding: 20px; margin-bottom: 50px">
+                        <tbdy>
+                            <tr style="padding-bottom: 10px;">
+                                <td>
+                                    <label for="name">이름</label>
+                                    <input id="name" type="text" name="myname" placeholder="이름입력" required> 
+                                    <label for="pw">비밀번호 설정</label>
+                                    <input id="pw" type="text" name="mypw" required>
+                                </td>
+                            </tr>
 
-                    <label for="pw2">비밀번호 확인</label>
-                    <input id="pw2" type="text" name="mypw2" required>
+                            <tr>
+                                <td>
+                                <label for="age">생년월일</label>
+                                <input id="age" type="date" name="mybirth" required>
+                                <label for="pw2">비밀번호 확인</label>
+                                <input id="pw2" type="text" name="mypw2" required>
+                                </td>
+                            </tr>
+                        
+            
 
+                            <tr>
+                                <td>
+                                <label for="id">ID</label>
+                                <input id="id" type="text" name="myid" required>
+                                <input type="submit" value="설정변경">
+                                </td>
+                            </tr>
+            
+
+
+  
+                        </tbdy>
+                    </table>
 
                 </form>
             </div>
             
             <h1>주거비 설정</h1>
-            <div class="livingform">
+            <div>
                 
                 <form>
-                    <label for="month">월세</label>
-                    <input id="month" type="number" name="mymonth" required>만원
-            
-                    <label for="bill">관리비</label>
-                    <input id="bill" type="number" name="mybill" required>만원
-                    
-                    <label for="goal">목표 생활비</label>
-                    <input id="goal" type="number" name="mygoal" required> 만원
-                    
-                    <label for="auto">자동이체</label>
-                    <select name="auto" size="2">
-                
-                        <option value="yes">설정함</option>
-                        <option value="no">설정안함</option>
-                        
-                    </select>
+                    <table style="width:80%; padding: 20px; margin-bottom: 50px"> 
+                        <tbdy>
 
-                    <label for="alert">알림일</label>
-                    <input id="alert" type="text" name="myalert" required><br>
+                            <tr>
+                                <td>
+                                   
+                                    <label for="month">월세</label>
+                                    <input id="month" type="number" name="mymonth" required>만원
+                            
+                                   
+                                </td>
+                                <td>
+                                    <label for="bill">관리비</label>
+                                    <input id="bill" type="number" name="mybill" required>만원
+                                </td>
+                            </tr>
 
-                    <label for="account">계좌연동</label>
-                    <input id="account1" type="radio" name="myaccount" required value="011">농협은행
-                    <input id="account2" type="radio" name="myaccount" required value="088">신한은행
-                    <input id="account3" type="radio" name="myaccount" required value="004">국민은행
-                    <input id="account4" type="radio" name="myaccount" required value="090">카카오뱅크
-                    <input id="account5" type="radio" name="myaccount" required value="020">우리은행
-                    <label for="accountnum">계좌번호</label>
-                    <input id="accountnum" type="number" name="myaccount" required>
+                            <tr>
+                                <td>
+                                    <label for="goal">목표 생활비</label>
+                                    <input id="goal" type="number" name="mygoal" required> 만원
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="auto">자동이체</label>
+                                    <select name="auto" size="2">
+                                
+                                        <option value="yes">설정함</option>
+                                        <option value="no">설정안함</option>
+                                        
+                                    </select>
+                                </td>
+                                
+                                <td>
+                                    <label for="alert">알림일</label>
+                                    <input id="alert" type="text" name="myalert" required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="account">계좌연동</label>
+                                    <table>
+                                        <tbdy>
+                                            <tr>
+                                                <td>
+                                                    <input id="account1" type="radio" name="my_account" required value="011">농협은행
+                                                </td>
+                                                <td>
+                                                    <input id="account2" type="radio" name="my_account" required value="004">국민은행
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input id="account3" type="radio" name="my_account" required value="088">신한은행
+                                                </td>
+                                                <td>
+                                                    <input id="account4" type="radio" name="my_account" required value="020">우리은행
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input id="account5" type="radio" name="my_account" required value="090">카카오뱅크
+                                                </td>
+                                            </tr>
+                                        </tbdy>
+                                    </table>
+                                </td>
+                                <td>
+                                    <label for="accountnum">계좌번호</label>
+                                    <input id="accountnum" type="text" name="myaccount" required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="month_account">임차인 계좌</label>
+                                    <table>
+                                        <tbdy>
+                                            <tr>
+                                                <td>
+                                                    <input id="month_account1" type="radio" name="my_month_account" required value="011">농협은행
+                                                </td>
+                                                <td>
+                                                    <input id="month_account2" type="radio" name="my_month_account" required value="004">국민은행
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input id="month_account3" type="radio" name="my_month_account" required value="088">신한은행
+                                                </td>
+                                                <td>
+                                                    <input id="month_account4" type="radio" name="my_month_account" required value="020">우리은행
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input id="month_account5" type="radio" name="my_month_account" required value="090">카카오뱅크
+                                                </td>
+                                            </tr>
+                                        </tbdy>
+                                    </table>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                </td>
+                                <td>
+                                    <label for="month_accountnum">임차인계좌번호</label>
+                                    <input id="month_accountnum" type="text" name="my_month_accountnum" required>
+                                </td>          
+                                
+
+                            </tr>
+                            
+                            <tr>
+                                
+                                <td>
+                                    <td>
+                                        <input type="submit" value=" 주거비 정보 등록">
+                                    </td>
+                                </td>
+                            </tr>
+                            
+        
+
 
 
                  
 
-                    <label for="month_account">월세계좌연동</label>
-                    <input id="month_account1" type="radio" name="my_month_account" required value="011">농협은행
-                    <input id="month_account2" type="radio" name="my_month_account" required value="088">신한은행
-                    <input id="month_account3" type="radio" name="my_month_account" required value="004">국민은행
-                    <input id="month_account4" type="radio" name="my_month_account" required value="090">카카오뱅크
-                    <input id="month_account5" type="radio" name="my_month_account" required value="020">우리은행
 
 
 
-                    <label for="month_accountnum">월세계좌번호</label>
-                    <input id="month_accountnum" type="num" name="my_month_accountnum" required>
 
 
 
-                    <input type="hidden" name="backcode" value="011">
+
+                        </tbdy>
+                   </table>
+                   
                 </form>
             </div>
 
             <h1>추천관리</h1>
             <h2>금융상품</h2>
             <div class="recmd">
-                <table style="width:90%; padding: 20px; margin-bottom: 50px">
+                <div id="nav">
+                    <ul class="menu">
+                        <li id="common" class="menu-padding"><a href="javascript:;" onclick="function();"><h2>금융상품</h2></a><hr>
+                            <ul class="sub">
+                                <li><a href="#"><table style="width:80%; padding: 20px; margin-bottom: 50px">
+                                    <tbody>
+                                        <tr style="padding-bottom: 10px;">
+                                            <td>
+                                                <a href="#">
+                                                    <div class="circle">
+                                                        <h4>투자성향</h4>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">
+                                                    <div class="circle">
+                                                        <h4>예.적금</h4>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">
+                                                    <div class="circle">
+                                                        <h4>주식/펀드</h4>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">
+                                                    <div class="circle">
+                                                        <h4>대체투자</h4>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="#">
+                                                    <div class="circle">
+                                                        <h4>카드</h4>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">
+                                                    <div class="circle">
+                                                        <h4>보험</h4>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">
+                                                    <div class="circle">
+                                                        <h4 id="two-lines">연금/저축</h4>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#">
+                                                    <div class="circle">
+                                                        <h4>대출</h4>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </div>
+                
+            </div>
+            </div>
+
+            <h2 style="margin-left:15%">구독상품</h2>
+            <div class="recmd" style="margin-left:15%;">
+                <table style="width:80%; padding: 20px; margin-bottom: 30px">
                     <tbody>
                         <tr style="padding-bottom: 10px;">
                             <td>
                                 <a href="#">
                                     <div class="circle">
-                                        <h4>투자성향</h4>
+                                        <h4>식품</h4>
                                     </div>
                                 </a>
                             </td>
                             <td>
                                 <a href="#">
                                     <div class="circle">
-                                        <h4>예.적금</h4>
+                                        <h4>신선야채</h4>
                                     </div>
                                 </a>
                             </td>
                             <td>
                                 <a href="#">
                                     <div class="circle">
-                                        <h4>주식/펀드</h4>
+                                        <h4>세탁/청소</h4>
                                     </div>
                                 </a>
                             </td>
                             <td>
                                 <a href="#">
                                     <div class="circle">
-                                        <h4>대체투자</h4>
+                                        <h4>생활용품</h4>
                                     </div>
                                 </a>
                             </td>
@@ -221,28 +428,28 @@
                             <td>
                                 <a href="#">
                                     <div class="circle">
-                                        <h4>카드</h4>
+                                        <h4>의류</h4>
                                     </div>
                                 </a>
                             </td>
                             <td>
                                 <a href="#">
                                     <div class="circle">
-                                        <h4>보험</h4>
+                                        <h4>주류</h4>
                                     </div>
                                 </a>
                             </td>
                             <td>
                                 <a href="#">
                                     <div class="circle">
-                                        <h4 id="two-lines">연금/저축</h4>
+                                        <h4 id="two-lines">콘텐츠</h4>
                                     </div>
                                 </a>
                             </td>
                             <td>
                                 <a href="#">
                                     <div class="circle">
-                                        <h4>대출</h4>
+                                        <h4>반려동물</h4>
                                     </div>
                                 </a>
                             </td>
@@ -252,17 +459,6 @@
             </div>
             </div>
 
-            <h2>구독상품</h2>
-            <div class="recmd">
-                <div class="circle circle1">식품</div>
-                <div class="circle circle2">신선.야채</div>
-                <div class="circle circle3">세탁/청소</div>
-                <div class="circle circle4">생활용품</div>
-                <div class="circle circle5">의류</div>
-                <div class="circle circle6">주류</div>
-                <div class="circle circle7">콘텐츠</div>
-                <div class="circle circle8">반려동물</div>
-            </div>
         </div>
     </div>
 </body>
